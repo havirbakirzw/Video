@@ -49,7 +49,7 @@ public struct VideoPlayer {
 
 @available(iOS 13, *)
 public extension VideoPlayer {
-    
+    /// TODO: Make default value bigger for ios 13
     /// Set the preload size, the default value is 1024 * 1024, unit is byte.
     static var preloadByteCount: Int {
         get { VideoPreloadManager.shared.preloadByteCount }
@@ -92,8 +92,8 @@ public extension VideoPlayer {
         }
         
         var autoReplay: Bool = false
-        var mute: Bool = false
-        var speedRate: Float = 1.0
+        var mute: Bool = true
+        var speedRate: Float = 1.1
         var contentMode: UIView.ContentMode = .scaleToFill
         
         var handler: Handler = Handler()
